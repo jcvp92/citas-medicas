@@ -5,7 +5,7 @@ import { Appointment } from "../db/mongoose";
 
  
 export const createAppointment=(req:Request,res:Response)=>{
-// crear
+// crear citas 
    let {body} = req;
    let objAppointment= new Appointment({
          dayAppointment: body.dayAppointment,
@@ -34,7 +34,7 @@ export const createAppointment=(req:Request,res:Response)=>{
   
 
 }
-//traer
+//traer 
 export const getAppointments = (req: Request, res: Response) => {
     Appointment.find()
                 .exec((err, appointmenst) => {
@@ -51,7 +51,7 @@ export const getAppointments = (req: Request, res: Response) => {
                     })
                 })
 }
-
+// actualiizar las citas 
 export const uptadeAppointmentById = (req: Request, res: Response) => {
     let id = req.params.id;
     let body = req.body
@@ -79,7 +79,7 @@ export const uptadeAppointmentById = (req: Request, res: Response) => {
         
     })
 }
-
+ // eliminar las citas 
 export const deleteAppointmentById = (req: Request, res: Response) => {
     let id = req.params.id;
 

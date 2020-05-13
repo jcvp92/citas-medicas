@@ -1,5 +1,5 @@
 import { Schema } from  "mongoose";
-
+// importamos mongoose  en nuestro esquemas  de citas
 export const appointmentSchema:Schema = new Schema({
 
     dayAppointment: {type:Date, required:true,maxlength:10},
